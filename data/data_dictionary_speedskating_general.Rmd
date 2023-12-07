@@ -1,0 +1,79 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+
+# Speed skating data dictionary
+<hr>
+
+<h3> Content </h3>
+
+
+This dataset includes data that is registered during the training sessions of speed skaters in their competitive season. During these training sessions, the position on the ice rink is tracked using a transponder that the speed skaters wear around their ankle. Lastly, characteristics of the speed skaters (e.g. gender, discipline, maximal heart rate) are recorded as well.
+
+Below you can find the definitions of each variable in the dataset.
+
+<hr>
+
+| Variable | Description |
+|:---------------------------------------|:----------------------------------------------------------------------------|
+| | |
+| **Date**                           | |
+| `  date`                           | date on which the training session was executed and data was collected |                        
+| `  year                          ` | year | 
+| `  month                         ` | month |
+| `  day                           ` | day of the month [1-31] |
+| `  weekday                       ` | day of the week  [1-7] (starting on Monday) |
+| `  yearday                       ` | day of the year  [1-366] |
+| **Skater**                           | |
+| `  skater_id                     ` | identifier of the speed skater after pseudonymisation |
+| `  skater_type                   ` | discipline of the speed skater (sprint or allround) |
+| `  gender                        ` | gender of speed skater (m: male, f: female) |
+| **Training**                       | |
+| `  session                       ` | training session number of the respective speed skater for this day |
+| `  training_type                 ` | training type of the session as defined by the coach in the training schedule |
+| **External training load**                      | |
+| `  ice_start                     ` | start of the training session, first registration of the Mylaps transponder (%H:%M:%S) |
+| `  ice_duration                  ` | duration of the training session, registration of the Mylaps transponder (in minutes) |
+| `  ice_distance                  ` | total distance covered in the training session (in km) |
+| `  ice_nr_laps                   ` | total number of laps covered in the training session (in laps) |
+| `  ice_mean_speed_segment        ` | average speed over all segments within the training session (in km/h) |
+| `  ice_median_speed_segment      ` | median speed over all segments within the training session (in km/h) |
+| `  ice_iqr_speed_segment         ` | inter quartile range of speed over all segments within the training session (in km/h) |
+| `  ice_sd_speed_segment          ` | standard deviation of speed over all segments within the training session (in km/h) |
+| `  ice_95p_speed_segment         ` | 95th percentile of speed over all segments within the training session (in km/h) |
+| `  ice_90p_speed_segment         ` | 90th percentile of speed over all segments within the training session (in km/h) |
+| `  ice_75p_speed_segment         ` | 75th percentile of speed over all segments within the training session (in km/h) |
+| `  ice_25p_speed_segment         ` | 25th percentile of speed over all segments within the training session (in km/h) |
+| `  ice_max_speed_segment         ` | maximal speed over the course of one segment within the training session (in km/h) |
+| `  ice_max_accel_segment         ` | maximal acceleration over the course of one segment within the training session (in m/s2) |
+| `  ice_fastest_lap               ` | time of fastest lap within the training session (in seconds) |
+| `  ice_fastest_turn1             ` | time of fastest first turn within the training session (in seconds) |
+| `  ice_fastest_turn2             ` | time of fastest second turn within the training session (in seconds) |
+| `  ice_fastest_straight1         ` | time of fastest first straight within the training session (in seconds) |
+| `  ice_fastest_straight2         ` | time of fastest second straight within the training session (in seconds) |
+| **Internal training load**                      | |
+| `  HR_start                      ` | start of the training session, first registration of the heart rate belt (%H:%M:%S)  |
+| `  HR_duration                   ` | duration of the training session, registration of heart rate belt (in minutes) |
+| `  HR_max_overall                ` | overall maximal heart rate of the speed skater (99.9 percentile based on historic training data) |
+| `  HR_max.01s                    ` | maximal heart rate value within the training session, 1 second average (in bpm) |
+| `  HR_max.05s                    ` | maximal heart rate value within the training session, 5 second average (in bpm) |
+| `  HR_max.15s                    ` | maximal heart rate value within the training session, 15 second average (in bpm)|
+| `  HR_mean                       ` | average heart rate value within the training session (in bpm) |
+| `  HR_median                     ` | median heart rate value within the training session (in bpm) |
+| `  HR_sd                         ` | variation in heart rate values within the training session, in standard deviations (in bpm) |
+| `  HR_iqr                        ` | variation in heart rate values within the training session, in interquantile range (in bpm) |
+| `  HR_95p                        ` | 95th percentile of heart rate values within the training session, (in bpm) |
+| `  HR_90p                        ` | 90th percentile of heart rate values within the training session, (in bpm) |
+| `  HR_75p                        ` | 75th percentile of heart rate values within the training session, (in bpm) |
+| `  HR_25p                        ` | 25th percentile of heart rate values within the training session, (in bpm) |
+| `  HR_zeros                      ` | percentage of the training session where no HR is registered, HR = 0 (in %) |
+| `  HR_z0_min                     ` | total time in heart rate zone 0 [<50% of HRmax] (in minutes) |
+| `  HR_z1_min                     ` | total time in heart rate zone 1 [50-60% of HRmax] (in minutes) |
+| `  HR_z2_min                     ` | total time in heart rate zone 2 [60-70% of HRmax] (in minutes) |
+| `  HR_z3_min                     ` | total time in heart rate zone 3 [70-80% of HRmax] (in minutes) |
+| `  HR_z4_min                     ` | total time in heart rate zone 4 [80-90% of HRmax] (in minutes) |
+| `  HR_z5_min                     ` | total time in heart rate zone 5 [90-100% of HRmax] (in minutes) | 
+| | |
